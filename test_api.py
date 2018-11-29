@@ -12,10 +12,10 @@ def get_response():
     'content-type': 'application/json',
     'token' : 'secret_key'
     }
-    body = json.dumps( {'cities': ['Budapest', 'Szeged', 'Debrecen']} )
+    body = json.dumps( {'x': [[5.1, 3.4, 1.3, 0.2], [6.0, 3. , 5.1, 1.8], [6.9, 2.8, 4.8, 1.4] ]} )
     conn.request(
     	'POST',
-    	'/weather', 
+    	'/predict', 
     	headers=header,
     	body=body
     )
